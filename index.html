@@ -1,0 +1,91 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Christmas Wordle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- falling snow -->
+    <div class="snow" aria-hidden="true"></div>
+
+    <main class="app">
+      <header class="top">
+        <div class="banner" role="banner">
+          <div class="banner-title">
+            🎄 Merry Christmas from <span class="names">EJ and RJ</span>! 🎅
+          </div>
+          <div class="banner-sub">Enjoy the game! ✨</div>
+        </div>
+
+        <h1 class="logo">HOLIDAY WORDLE</h1>
+        <p id="status" class="status">Type a 5-letter word</p>
+
+        <!-- How to Play -->
+        <section class="howto" aria-label="How to play">
+          <h2>🎁 How to Play</h2>
+          <ol>
+            <li>
+              Guess the <strong>5-letter word</strong> in
+              <strong>6 tries</strong>.
+            </li>
+            <li>Type letters using your keyboard or the on-screen keys.</li>
+            <li>Press <strong>Enter</strong> to submit your guess.</li>
+          </ol>
+
+          <div class="legend">
+            <div class="legend-item">
+              <span class="tile-demo correct">A</span>
+              <span
+                ><strong>Green</strong> = correct letter &amp; correct spot
+                🎄</span
+              >
+            </div>
+            <div class="legend-item">
+              <span class="tile-demo present">A</span>
+              <span
+                ><strong>Yellow</strong> = correct letter, wrong spot ⭐</span
+              >
+            </div>
+            <div class="legend-item">
+              <span class="tile-demo wrong">A</span>
+              <span><strong>Gray</strong> = letter not in the word ❄️</span>
+            </div>
+          </div>
+
+          <p class="goodluck">🎅 Good luck and have fun!</p>
+        </section>
+      </header>
+
+      <section id="grid" class="grid" aria-label="Word grid"></section>
+
+      <!-- Popup message (appears above keyboard) -->
+      <section
+        id="popup"
+        class="popup hidden"
+        aria-live="polite"
+        aria-label="Game message"
+      >
+        <div class="popup-card">
+          <div id="popupText" class="popup-text">Message here</div>
+          <button id="popupOk" class="popup-ok" type="button">OK</button>
+        </div>
+      </section>
+
+      <section class="keyboard" aria-label="Keyboard">
+        <div class="kb-row" id="kb-row-1"></div>
+        <div class="kb-row" id="kb-row-2"></div>
+        <div class="kb-row" id="kb-row-3"></div>
+      </section>
+
+      <footer class="footer">
+        Tip: Try Christmas-y words like <strong>SANTA</strong>,
+        <strong>SNOWY</strong>, <strong>TREES</strong> 🙂
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
